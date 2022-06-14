@@ -31,13 +31,15 @@ const App = () => {
     <div className="App">
       <h1>Fetch API</h1>
       {error && <p>{error}</p>}
+      <div className='container'>
       {zooAnimal.map((animal)=>(
-        <div key={animal.id}>
+        <div className='items-container' key={animal.id}>
           <h3>{animal.name}</h3>
           <img src={animal.image_link} alt="animal"></img>
         </div>
         
       ))}
+      </div>
     </div>
   );
 };
